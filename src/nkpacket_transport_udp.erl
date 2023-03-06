@@ -177,7 +177,7 @@ init([NkPort]) ->
     put(nkpacket_debug, Debug),
     try
         % ListenOpts = [binary, {reuseaddr, true}, {ip, ListenIp}, {active, once}],
-        ListenOpts = [binary, {ip, ListenIp}, {active, once}, {buffer, 65000}, {recbuf, 100000}],
+        ListenOpts = [binary, {ip, ListenIp}, {active, once}, {buffer, 8192}, {recbuf, 16384}],
         Socket = case nkpacket_transport:open_port(NkPort, ListenOpts) of
             {ok, Socket0}  ->
                 Socket0;
