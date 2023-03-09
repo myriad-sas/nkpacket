@@ -30,7 +30,7 @@
 
 
 -define(SYNC_TIMEOUT, 30000).
--define(UDP_MAX_SIZE, 1300).
+-define(UDP_MAX_SIZE, 5000).
 
 
 
